@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         String url = etSearchBox.getText().toString();
         if (url.isEmpty()) {
             return;
+        } else if (url.equals("index.html")) {
+            web.loadUrl("file:///android_asset/index.html");
         } else if ((url.contains("https://")) || (url.contains("http://"))) {
             web.loadUrl(url);
             siteHistory.newSiteUpdateHistory(url);
