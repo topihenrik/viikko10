@@ -22,8 +22,6 @@ public class MainActivity extends AppCompatActivity {
         web.getSettings().setJavaScriptEnabled(true);
         web.loadUrl("https://www.google.com/");
         siteHistory.newSiteUpdateHistory("https://www.google.com/");
-        //https://www.google.com/
-        //file:///android_asset/index.html
     }
 
     public void goButton(View view) {
@@ -32,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         } else if (url.equals("index.html")) {
             web.loadUrl("file:///android_asset/index.html");
+            siteHistory.newSiteUpdateHistory("file:///android_asset/index.html");
         } else if ((url.contains("https://")) || (url.contains("http://"))) {
             web.loadUrl(url);
             siteHistory.newSiteUpdateHistory(url);

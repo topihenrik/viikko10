@@ -11,12 +11,9 @@ public class SiteHistory {
         currentLocation = -1;
     }
 
-
     public void newSiteUpdateHistory(String url) {
         if (currentLocation < sites.size()-1) {
-            //int i = currentLocation;
             while (currentLocation < sites.size()-1) {
-                //i++;
                 sites.remove(currentLocation+1);
             }
         }
@@ -51,5 +48,4 @@ public class SiteHistory {
         System.out.println("Current location:" + currentLocation + "ArrayList size:" + sites.size());
         return sites.get(currentLocation);
     }
-
 }
