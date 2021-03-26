@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:onClick="initializeButton"
-        android:text="Intitialize"
+        android:text="Initialize"
         app:layout_constraintEnd_toEndOf="@+id/webView"
         app:layout_constraintTop_toBottomOf="@+id/webView" />
 
